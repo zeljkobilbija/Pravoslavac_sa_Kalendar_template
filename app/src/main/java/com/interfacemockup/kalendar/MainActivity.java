@@ -1,11 +1,15 @@
 package com.interfacemockup.kalendar;
 
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.icu.util.Calendar;
 import android.icu.util.GregorianCalendar;
 import android.os.Build;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,9 +20,23 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+import static android.content.ContentValues.TAG;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.messaging.FirebaseMessaging;
+
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.*;
 
+
 public class MainActivity extends AppCompatActivity {
+
+   // private static final String TAG = "MyActivity";
 
     private PravoslavniPostLabel _postLabel;
     private PravoslavniGregorijanskiDatumLabel _gregorijanskiDatumLabel;
@@ -81,7 +99,9 @@ public class MainActivity extends AppCompatActivity {
         _julijanskiDatumLabel.napisiJulijanskiDatum(counter_to_add);
         _julijanskiDatumLabel.setBojuTexta(counter_to_add);
 
+        //TODO: Aktivirati AdMob pre slanja na GooglePlayStore
         addMob();
+        findMessageToken();
 
     }
 
@@ -187,6 +207,32 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
     }
+
+
+    private void findMessageToken(){
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "getInstanceId failed", task.getException());
+                            return;
+                        }
+
+                        // Get new Instance ID token
+                        String token = task.getResult().getToken();
+
+                        // Log and toast
+                       String msg = getString(R.string.msg_token_fmt, token);
+                       System.out.println("HHHHHHHHHHHHHH");
+                        System.out.println(token);
+                        Log.d(TAG, msg);
+                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+
 }
 
 

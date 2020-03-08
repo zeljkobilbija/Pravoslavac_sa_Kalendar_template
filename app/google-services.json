@@ -8,7 +8,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1021483874969:android:486134ab34781c0e0d9608",
+        "mobilesdk_app_id": "1:1021483874969:android:10c1b670bde808c40d9608",
         "android_client_info": {
           "package_name": "com.interfacemockup.pravoslavac"
         }
@@ -48,8 +48,7 @@
             }
           ]
         }
-      },
-      "admob_app_id": "ca-app-pub-7920431183682527~1369121836"
+      }
     }
   ],
   "configuration_version": "1"

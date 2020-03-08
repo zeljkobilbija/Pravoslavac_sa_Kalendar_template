@@ -189,7 +189,7 @@
            android:layout_centerHorizontal="true"
            android:layout_alignParentBottom="true"
            app:adSize="SMART_BANNER"
-           app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+           app:adUnitId="ca-app-pub-7920431183682527/3639868432"
            app:layout_constraintBottom_toBottomOf="@+id/bgView" app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.333">
    </com.google.android.gms.ads.AdView>

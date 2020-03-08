@@ -13,4 +13,5 @@
     <string name="btnC">$</string>
     <string name="btnD">-</string>
     <string name="todo">TODO</string>
+    <string name="msg_token_fmt">BOH</string>
 </resources>
