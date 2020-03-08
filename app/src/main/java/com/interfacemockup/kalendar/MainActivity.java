@@ -66,16 +66,8 @@ public class MainActivity extends AppCompatActivity {
         _gregorijanskiDatumLabel.napisiIzmenjeniDatum(counter_to_add);
         _gregorijanskiDatumLabel.setBojuTexta(counter_to_add);
 
-
-        //_ikona.setIkonImage(counter_to_add);
         setIkonu(counter_to_add);
         setSvetitelja(counter_to_add);
-
-
-
-
-        //_svetitelj.setSvetacText(counter_to_add);
-        //_svetitelj.setBojuTexta(counter_to_add);
 
         _julijanskiDatumLabel.napisiJulijanskiDatum(counter_to_add);
         _julijanskiDatumLabel.setBojuTexta(counter_to_add);
@@ -94,11 +86,6 @@ public class MainActivity extends AppCompatActivity {
             _ikona.setImageResource(_konstante.drawables_prosta_godina[shared_kalendar_instance.vratiBrojDana(counter) - 1]);
         }
 
-       // if (shared_kalendar_instance.nedeljaJe(counter)){
-          //  _ikona.setBackgroundColor(Color.parseColor("#CF331F"));
-        //}else {
-          //  _ikona.setBackgroundColor(Color.alpha(0));
-        //}
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
