@@ -8,6 +8,7 @@ import android.icu.util.GregorianCalendar;
 import android.os.Build;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -18,6 +19,7 @@ import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,6 +35,9 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.*;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,9 +47,10 @@ public class MainActivity extends AppCompatActivity {
     private PravoslavniGregorijanskiDatumLabel _gregorijanskiDatumLabel;
     private PravoslavnaIkona _ikona;
     private PravoslavniSvetacLabel _svetitelj;
-
     private PravoslavniJulijanskiDatumLabel _julijanskiDatumLabel;
     private View _view;
+
+    private ImageButton _btnA;
     private int _rb_danaUgodini = 0;
     private Calendar _calendar;
     private int _counter;
@@ -60,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
+        FirebaseInstanceId.getInstance().getInstanceId();
+       // new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("4F93385764579C780A11C861D3268329"));
+
+
 
         _counter = 0;
         _calendar = GregorianCalendar.getInstance();
@@ -75,12 +85,20 @@ public class MainActivity extends AppCompatActivity {
         _ikona = findViewById(R.id.idIkona);
         _svetitelj = findViewById(R.id.idSvetacLabel);
         _julijanskiDatumLabel = findViewById(R.id.idJulijanskiDatumLabel);
+        _btnA = findViewById(R.id.idBtnA);
+        _btnA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HashMap<String, String> param = new HashMap<String, String>();
+                param.put("regID", FirebaseInstanceId.getInstance().getToken());
+            }
+        });
 
         setUI(_counter);
 
         setSwipes(_rb_danaUgodini);
 
-
+        addNekiKlinac();
 
     }
 
@@ -100,8 +118,11 @@ public class MainActivity extends AppCompatActivity {
         _julijanskiDatumLabel.setBojuTexta(counter_to_add);
 
         //TODO: Aktivirati AdMob pre slanja na GooglePlayStore
-        addMob();
-        findMessageToken();
+        // TODO: i proveriti codice za bannere
+        //addMob();
+
+        //TODO: Ova funkcija ispod izgleda nije uopste potrebna osim za pronalazenje tokena
+        //findMessageToken();
 
     }
 
@@ -230,6 +251,23 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+
+    private void addNekiKlinac(){
+        FirebaseMessaging.getInstance().subscribeToTopic("weather")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        String msg = getString(R.string.msg_subscribed);
+                        if (!task.isSuccessful()) {
+                            msg = getString(R.string.msg_subscribe_failed);
+                        }
+                        Log.d(TAG, msg);
+                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    }
+                });
+        // [END subscribe_topics]
     }
 
 
