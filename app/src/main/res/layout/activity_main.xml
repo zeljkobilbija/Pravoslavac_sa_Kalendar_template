@@ -182,6 +182,17 @@
               tools:layout_editor_absoluteX="266dp"
               android:contentDescription="@string/todo"/>
    </LinearLayout>
+   <com.google.android.gms.ads.AdView
+           android:id="@+id/adView"
+           android:layout_width="461dp"
+           android:layout_height="99dp"
+           android:layout_centerHorizontal="true"
+           android:layout_alignParentBottom="true"
+           app:adSize="SMART_BANNER"
+           app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+           app:layout_constraintBottom_toBottomOf="@+id/bgView" app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.333">
+   </com.google.android.gms.ads.AdView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,11 +33,15 @@ public class MainActivity extends AppCompatActivity {
     private PravoslavniKalendar shared_kalendar_instance;
     private PravoslavneKonstante _konstante;
 
+    private AdView mAdView;
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
 
         _counter = 0;
         _calendar = GregorianCalendar.getInstance();
@@ -71,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
         _julijanskiDatumLabel.napisiJulijanskiDatum(counter_to_add);
         _julijanskiDatumLabel.setBojuTexta(counter_to_add);
+
+        addMob();
 
     }
 
@@ -165,4 +176,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    private void addMob(){
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+    }
 }
+
+
