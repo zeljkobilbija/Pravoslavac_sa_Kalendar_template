@@ -11,7 +11,7 @@ import static android.content.ContentValues.TAG;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
-    private static final String TAG = "MyFirebaseMsgService";
+    //private static final String TAG = "MyFirebaseMsgService";
 
     /**
      * Called if InstanceID token is updated. This may occur if the security of
@@ -20,6 +20,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
      */
     @Override
     public void onNewToken(String token) {
+        System.out.println("QQQQQQQQQQQQQQ");
         Log.d(TAG, "Refreshed token: " + token);
 
         // If you want to send messages to this application instance or
@@ -77,6 +78,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
     }
+
+
 
 
 

@@ -22,6 +22,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.RequestConfiguration;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -67,8 +68,9 @@ public class MainActivity extends AppCompatActivity {
 
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
         FirebaseInstanceId.getInstance().getInstanceId();
-       // new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("4F93385764579C780A11C861D3268329"));
 
+        new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("4F93385764579C780A11C861D3268329"));
+        GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(MainActivity.this);
 
 
         _counter = 0;
@@ -122,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         //addMob();
 
         //TODO: Ova funkcija ispod izgleda nije uopste potrebna osim za pronalazenje tokena
-        //findMessageToken();
+        findMessageToken();
 
     }
 
