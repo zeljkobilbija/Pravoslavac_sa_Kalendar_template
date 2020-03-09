@@ -24,6 +24,7 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import static android.content.ContentValues.TAG;
@@ -42,6 +43,7 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
    // private static final String TAG = "MyActivity";
+   private FirebaseAnalytics mFirebaseAnalytics;
 
     private PravoslavniPostLabel _postLabel;
     private PravoslavniGregorijanskiDatumLabel _gregorijanskiDatumLabel;
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
         FirebaseInstanceId.getInstance().getInstanceId();
