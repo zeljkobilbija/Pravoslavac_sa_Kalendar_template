@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:background="@color/colorRosso"
+              android:baselineAligned="false"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
     <LinearLayout
@@ -9,6 +10,7 @@
             android:layout_height="wrap_content">
         <ImageView
                 android:id="@+id/idMessageIcon"
+                android:contentDescription="@string/jesus"
                 android:padding="5dp"
                 android:src="@drawable/jesus"
                 android:layout_width="50dp"
@@ -24,14 +26,14 @@
             android:layout_height="wrap_content">
         <TextView
                 android:id="@+id/idTitle"
-                android:text="Title"
+                android:text="@string/title"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         <TextView
                 android:id="@+id/idMessage"
-                android:text="Message"
+                android:text="@string/message"
                 android:textSize="15sp"
                 android:textColor="@color/colorSiviText"
                 android:layout_width="match_parent"

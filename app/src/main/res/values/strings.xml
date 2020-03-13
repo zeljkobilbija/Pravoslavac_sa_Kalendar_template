@@ -17,4 +17,7 @@
     <string name="msg_subscribed">Prihvacen upis na grupu</string>
     <string name="msg_subscribe_failed">Failed to subscribe</string>
     <string name="default_notification_channel_id">pojma nemam o cemu se radi</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="jesus">jesus</string>
 </resources>
