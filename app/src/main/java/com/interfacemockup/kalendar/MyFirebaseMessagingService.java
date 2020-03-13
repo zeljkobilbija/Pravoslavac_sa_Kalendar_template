@@ -69,13 +69,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
     public void scheduleJob(){
-
     }
 
     public void handleNow(){
         System.out.println("WWWWWWWWWWWWWWWWWWW-------------------------------------WWWWWWWWWWWWWWWWWWWWWWWWWWW");
-
-
 
     }
 
