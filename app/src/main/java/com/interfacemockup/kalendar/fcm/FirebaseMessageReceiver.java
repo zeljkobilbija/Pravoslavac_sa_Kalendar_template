@@ -44,7 +44,7 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
 
                     Intent intent = new Intent(this, SplashScreen.class);
                     String channel_id = "web_app_channel";
-                    intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     Context context;
                     PendingIntent pendingIntetnt = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
                     Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
@@ -53,7 +53,7 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
                             .setSound(uri)
                             .setAutoCancel(true)
                             .setVibrate(new long[]{1000,1000,1000,1000})
-                            .setOnlyAlertOnce(true)
+                            .setOnlyAlertOnce(false)
                             .setContentIntent(pendingIntetnt);
 
                     if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.JELLY_BEAN){
@@ -70,10 +70,12 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
                         CharSequence name;
                         NotificationChannel notificationChannel = new NotificationChannel(channel_id, "web_app",NotificationManager.IMPORTANCE_HIGH );
                         notificationChannel.setSound(uri, null);
+                        assert notificationManager != null;
                         notificationManager.createNotificationChannel(notificationChannel);
                     }
 
-                    notificationManager.notify(0,builder.build());
+        assert notificationManager != null;
+        notificationManager.notify(0,builder.build());
 
 
     }

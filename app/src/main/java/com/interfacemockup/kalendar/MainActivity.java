@@ -70,11 +70,15 @@ public class MainActivity extends AppCompatActivity {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
-        FirebaseInstanceId.getInstance().getInstanceId();
 
         new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("4F93385764579C780A11C861D3268329"));
-        GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(MainActivity.this);
 
+        GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(MainActivity.this);
+        Log.d("Token", "...    " + FirebaseInstanceId.getInstance().getToken());
+        FirebaseInstanceId.getInstance().getInstanceId();
+        FirebaseMessaging.getInstance().subscribeToTopic("allDevices");
+        addNekiKlinac();
+        findMessageToken();
 
         _counter = 0;
         _calendar = GregorianCalendar.getInstance();
@@ -94,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         _btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HashMap<String, String> param = new HashMap<String, String>();
+                HashMap<String, String> param = new HashMap<>();
                 param.put("regID", FirebaseInstanceId.getInstance().getToken());
             }
         });
@@ -103,8 +107,26 @@ public class MainActivity extends AppCompatActivity {
 
         setSwipes(_rb_danaUgodini);
 
-        addNekiKlinac();
 
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        addNekiKlinac();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        addNekiKlinac();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        addNekiKlinac();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -127,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
         //addMob();
 
         //TODO: Ova funkcija ispod izgleda nije uopste potrebna osim za pronalazenje tokena
-        findMessageToken();
+        //findMessageToken();
 
     }
 
@@ -250,17 +272,17 @@ public class MainActivity extends AppCompatActivity {
 
                         // Log and toast
                        String msg = getString(R.string.msg_token_fmt, token);
-                       System.out.println("HHHHHHHHHHHHHH");
-                        System.out.println(token);
+                      // System.out.println("HHHHHHHHHHHHHH");
+                       // System.out.println(token);
                         Log.d(TAG, msg);
-                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
 
     private void addNekiKlinac(){
-        FirebaseMessaging.getInstance().subscribeToTopic("weather")
+        FirebaseMessaging.getInstance().subscribeToTopic("allDevices")
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -269,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
                             msg = getString(R.string.msg_subscribe_failed);
                         }
                         Log.d(TAG, msg);
-                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
         // [END subscribe_topics]
