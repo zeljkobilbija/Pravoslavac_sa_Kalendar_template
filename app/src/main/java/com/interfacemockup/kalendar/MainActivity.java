@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
     private AdView mAdView;
 
+
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
