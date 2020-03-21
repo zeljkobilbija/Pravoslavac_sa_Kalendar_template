@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseInstanceId.getInstance().getInstanceId();
         FirebaseMessaging.getInstance().subscribeToTopic("allDevices");
         addNekiKlinac();
-        findMessageToken();
+        //findMessageToken();
 
         _counter = 0;
         _calendar = GregorianCalendar.getInstance();
