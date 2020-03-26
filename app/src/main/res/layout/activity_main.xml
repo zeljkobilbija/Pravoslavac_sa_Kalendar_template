@@ -10,15 +10,15 @@
         tools:ignore="ExtraText">
 
 
-   <View
-           android:id="@+id/bgView"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           tools:layout_editor_absoluteY="0dp"
-           tools:layout_editor_absoluteX="0dp"
-           android:background="@color/colorBraon"
-           tools:ignore="MissingConstraints"/>
-   <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniPostLabel
+    <View
+            android:id="@+id/bgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"
+            android:background="@color/colorBraon"
+            tools:ignore="MissingConstraints"/>
+    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniPostLabel
            android:id="@+id/idPostLabe"
            android:text="@string/pravoslavnipostlabel"
            android:layout_width="wrap_content"
@@ -131,7 +131,7 @@
            android:layout_marginEnd="16dp">
 
 
-      <ImageButton
+     <!-- <ImageButton
               android:id="@+id/idBtnA"
               android:background="@drawable/btnshape"
               android:layout_width="50dp"
@@ -181,7 +181,65 @@
               android:src="@drawable/fb_4"
               tools:layout_editor_absoluteY="510dp"
               tools:layout_editor_absoluteX="266dp"
-              android:contentDescription="@string/todo"/>
+              android:contentDescription="@string/todo"/>-->
+      <ImageView
+              android:id="@+id/id_kalendar_imageA"
+              android:contentDescription="@string/selekcija_kalendara_"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:background="@drawable/btnshape"
+              android:layout_margin="3dp"
+              android:padding="5dp"
+              android:onClick="otvoriKalendar"
+              android:src="@drawable/kalendar">
+
+      </ImageView>
+      <ImageView
+              android:id="@+id/id_kalendar_imageB"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:background="@drawable/btnshape"
+              android:layout_margin="3dp"
+              android:padding="5dp"
+              android:onClick="otvoriKatihizis"
+              android:src="@drawable/krst2">
+
+      </ImageView>
+      <ImageView
+              android:id="@+id/id_kalendar_imageC"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:background="@drawable/btnshape"
+              android:layout_margin="3dp"
+              android:padding="5dp"
+              android:onClick="sharePravoslavca"
+              android:src="@drawable/share">
+
+      </ImageView>
+      <ImageView
+              android:id="@+id/id_kalendar_imageD"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:background="@drawable/btnshape"
+              android:layout_margin="3dp"
+              android:padding="5dp"
+              android:onClick="otvoriMolitvenik"
+              android:src="@drawable/molitva">
+
+      </ImageView>
+
+      <ImageView
+              android:id="@+id/id_kalendar_imageE"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:background="@drawable/btnshape"
+              android:layout_margin="3dp"
+              android:padding="5dp"
+              android:onClick="otvoriInfo"
+              android:src="@drawable/info">
+
+      </ImageView>
+
    </LinearLayout>
    <com.google.android.gms.ads.AdView
            android:id="@+id/adView"

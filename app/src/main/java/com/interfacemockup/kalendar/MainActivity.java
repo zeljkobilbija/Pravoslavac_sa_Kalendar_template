@@ -2,13 +2,16 @@ package com.interfacemockup.kalendar;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.icu.util.Calendar;
 import android.icu.util.GregorianCalendar;
+import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -53,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     private PravoslavniJulijanskiDatumLabel _julijanskiDatumLabel;
     private View _view;
 
-    private ImageButton _btnA;
+    private ImageView _kalendarImage;
     private int _rb_danaUgodini = 0;
     private Calendar _calendar;
     private int _counter;
@@ -76,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("4F93385764579C780A11C861D3268329"));
 
         GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(MainActivity.this);
-        Log.d("Token", "...    " + FirebaseInstanceId.getInstance().getToken());
+       // Log.d("Token", "...    " + FirebaseInstanceId.getInstance().getToken());
         FirebaseInstanceId.getInstance().getInstanceId();
         FirebaseMessaging.getInstance().subscribeToTopic("allDevices");
         addNekiKlinac();
@@ -91,19 +94,14 @@ public class MainActivity extends AppCompatActivity {
 
         _view = findViewById(R.id.bgView);
 
+        _kalendarImage = findViewById(R.id.id_kalendar_imageA);
         _postLabel = findViewById(R.id.idPostLabe);
         _gregorijanskiDatumLabel = findViewById(R.id.idGregorijanskiDatumLabel);
         _ikona = findViewById(R.id.idIkona);
         _svetitelj = findViewById(R.id.idSvetacLabel);
         _julijanskiDatumLabel = findViewById(R.id.idJulijanskiDatumLabel);
-        _btnA = findViewById(R.id.idBtnA);
-        _btnA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                HashMap<String, String> param = new HashMap<>();
-                param.put("regID", FirebaseInstanceId.getInstance().getToken());
-            }
-        });
+
+
 
         setUI(_counter);
 
@@ -300,6 +298,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void otvoriKalendar(View view) {
+        Intent intent = new Intent(this, GodisnjiKalendar.class);
+        startActivity(intent);
+    }
+
+    public void otvoriKatihizis(View view) {
+    }
+
+    public void sharePravoslavca(View view) {
+    }
+
+    public void otvoriMolitvenik(View view) {
+    }
+
+    public void otvoriInfo(View view) {
+    }
 }
 
 

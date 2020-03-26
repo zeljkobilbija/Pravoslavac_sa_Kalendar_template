@@ -13,11 +13,13 @@
     <string name="btnC">$</string>
     <string name="btnD">-</string>
     <string name="todo">TODO</string>
-    <string name="msg_token_fmt">"Token is ->     %s"</string>
+    <string name="msg_token_fmt">"Token is -> %s"</string>
     <string name="msg_subscribed">Prihvacen upis na grupu allDevices</string>
     <string name="msg_subscribe_failed">Failed to subscribe</string>
     <string name="default_notification_channel_id">pojma nemam o cemu se radi</string>
     <string name="title">Title</string>
     <string name="message">Message</string>
     <string name="jesus">jesus</string>
+    <string name="back">Назад</string>
+    <string name="selekcija_kalendara_">selekcija kalendara godisnjeg i mesecnog</string>
 </resources>

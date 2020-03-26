@@ -12,8 +12,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-
-
+        <activity android:name=".GodisnjiKalendar"
+                  android:screenOrientation="portrait">
+        </activity>
         <activity
                 android:name=".MainActivity"
                 android:label="@string/app_name"
@@ -31,14 +32,11 @@
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
                 android:value="ca-app-pub-7920431183682527~1369121836"/> <!-- [START firebase_service] -->
-
         <service android:name=".fcm.FirebaseMessageReceiver">
-
-                 <intent-filter>
-                     <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-                 </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
         </service>
-
         <service
                 android:name=".MyFirebaseMessagingService"
                 android:exported="false">
