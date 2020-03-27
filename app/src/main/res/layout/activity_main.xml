@@ -122,7 +122,6 @@
            android:orientation="horizontal"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:background="@drawable/linear"
            app:layout_constraintTop_toBottomOf="@+id/idJulTextView"
            android:layout_marginTop="24dp"
            app:layout_constraintEnd_toEndOf="parent"
@@ -202,7 +201,7 @@
               android:layout_margin="3dp"
               android:padding="5dp"
               android:onClick="otvoriKatihizis"
-              android:src="@drawable/krst2">
+              android:src="@drawable/bible">
 
       </ImageView>
       <ImageView
@@ -213,18 +212,18 @@
               android:layout_margin="3dp"
               android:padding="5dp"
               android:onClick="sharePravoslavca"
-              android:src="@drawable/share">
+              android:src="@drawable/sharing_content">
 
       </ImageView>
       <ImageView
-              android:id="@+id/id_kalendar_imageD"
+              android:id="@+id/id_kalendar_image"
               android:layout_width="50dp"
               android:layout_height="50dp"
               android:background="@drawable/btnshape"
               android:layout_margin="3dp"
               android:padding="5dp"
               android:onClick="otvoriMolitvenik"
-              android:src="@drawable/molitva">
+              android:src="@drawable/pray">
 
       </ImageView>
 
@@ -236,7 +235,7 @@
               android:layout_margin="3dp"
               android:padding="5dp"
               android:onClick="otvoriInfo"
-              android:src="@drawable/info">
+              android:src="@drawable/information">
 
       </ImageView>
 

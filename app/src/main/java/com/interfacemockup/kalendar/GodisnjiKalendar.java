@@ -9,9 +9,10 @@ import android.os.Bundle;
 public class GodisnjiKalendar extends AppCompatActivity {
 
     View view;
-    private Button backBtn;
-    private ListView listaMeseci;
-    private String[] naziviMeseca = {"Јануар", "Фебруар", "Март", "Април", "Мај", "Јун", "Јул", "Август", "Септембар", "Октобар", "Новембар", "Децембар"};
+
+    private ListView listView;
+    private TextView textView;
+    private String[] listItem;
 
 
     @Override
@@ -19,20 +20,34 @@ public class GodisnjiKalendar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_godisnji_kalendar);
 
-        backBtn = findViewById(R.id.backButton);
-        listaMeseci = findViewById(R.id.idDvanaestMeseci);
+        listView=(ListView)findViewById(R.id.idDvanaestMeseciListView);
+        textView=(TextView)findViewById(R.id.id_mesec_cell_textView);
+        listItem = getResources().getStringArray(R.array.nazivi_meseca);
 
-        backBtn.setOnClickListener(new View.OnClickListener() {
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, listItem);
+
+        final ArrayAdapter<String> adpt = new ArrayAdapter<>(this, R.layout.mesec_cell, R.id.id_mesec_cell_textView, listItem);
+
+        listView.setAdapter(adpt);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                // TODO Auto-generated method stub
+                String value=adapter.getItem(position);
+                Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
             }
         });
 
 
-
     }
 
+
+    public void home_btn_click(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
 }

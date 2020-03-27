@@ -22,4 +22,6 @@
     <string name="jesus">jesus</string>
     <string name="back">Назад</string>
     <string name="selekcija_kalendara_">selekcija kalendara godisnjeg i mesecnog</string>
+    <string name="back_button">back button image za kalendar 12 meseci</string>
+    <string name="_2020_godina">2020. godina</string>
 </resources>
