@@ -18,7 +18,6 @@
             android:layout_marginTop="8dp"
             android:padding="5dp"
             android:src="@drawable/arrow"
-            android:background="@drawable/btnshape"
             android:contentDescription="@string/back_button"
             android:onClick="home_btn_click"/>
 

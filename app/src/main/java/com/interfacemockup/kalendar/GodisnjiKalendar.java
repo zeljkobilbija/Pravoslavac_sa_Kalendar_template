@@ -1,6 +1,7 @@
 package com.interfacemockup.kalendar;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,4 +51,5 @@ public class GodisnjiKalendar extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
+
 }

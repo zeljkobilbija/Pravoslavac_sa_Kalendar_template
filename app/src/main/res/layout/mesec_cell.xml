@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+              android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="100dp"
-              android:background="@drawable/btnshape">
+              android:backgroundTint="@color/colorPrimaryDark"
+              android:background="@drawable/linear">
 
     <TextView
             android:id="@+id/id_mesec_cell_textView"
@@ -11,11 +12,11 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Medium Text"
-            android:textFontWeight="700"
+            android:textFontWeight="400"
             android:textStyle="italic"
             android:textAlignment="center"
             android:textSize="34sp"
             android:fontFamily="@font/actor"
-            android:textColor="@color/colorBanana"/>
+            android:textColor="@color/colorSiviText"/>
 
 </LinearLayout>
