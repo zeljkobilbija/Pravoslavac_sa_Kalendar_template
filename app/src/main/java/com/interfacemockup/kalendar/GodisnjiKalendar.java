@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
 
 public class GodisnjiKalendar extends AppCompatActivity {
 
@@ -14,6 +15,7 @@ public class GodisnjiKalendar extends AppCompatActivity {
     private ListView listView;
     private TextView textView;
     private String[] listItem;
+
 
 
     @Override
@@ -41,6 +43,8 @@ public class GodisnjiKalendar extends AppCompatActivity {
                // Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(), MesecniKalendar.class);
+                intent.putExtra(PravoslavneKonstante.SELECTED_ROW, position);
+
                 startActivity(intent);
 
             }

@@ -7,6 +7,7 @@ public class PravoslavneKonstante {
     public PravoslavniKalendar sharedKalendar = PravoslavniKalendar.getInstance();
 
 
+    public static final String SELECTED_ROW = "Selectovani Row";
     public int vaskrsMali;
     public int vaskrsVeliki;
     public int petrovskiPostMin;
