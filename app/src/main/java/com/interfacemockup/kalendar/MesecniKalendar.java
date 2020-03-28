@@ -7,6 +7,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniKalendar;
 
 import static com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante.SELECTED_ROW;
 
@@ -15,24 +16,20 @@ public class MesecniKalendar extends AppCompatActivity {
 
     int redniBroj;
     private ListView list_View;
-    private TextView text_View;
     private String[] list_Item;
-
+    private String[] lista_ikona;
+    private TextView nazivMeseca;
+    private ArrayAdapter<String> svetacAdapter;
+    private ArrayAdapter<String> svetacIkonaAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mesecni_kalendar);
 
         list_View = findViewById(R.id.id_Trideset_dana_ListView);
-        text_View = findViewById(R.id.id_ime_svetitelja);
-        list_Item = getResources().getStringArray(R.array.imena_svetitelja_prestupna_godina);
-
+        nazivMeseca = findViewById(R.id.id_mesec_textView);
         redniBroj = getIntent().getIntExtra(SELECTED_ROW, redniBroj);
-
-        final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
-
-        list_View.setAdapter(adapter);
-
+        izaberiMesecnuPlist(redniBroj);
 
     }
 
@@ -45,55 +42,87 @@ public class MesecniKalendar extends AppCompatActivity {
     private void izaberiMesecnuPlist(int izbor){
         switch (izbor){
             case 0:
-                System.out.println("QQQQQQQQ");
-                System.out.println(0b1);
+                list_Item = getResources().getStringArray(R.array.svetitelji_januar);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                //lista_ikona = getResources().getStringArray(R.array.ikone_prosta_godina);
+                //svetacIkonaAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ikona_svetitelja, lista_ikona);
+                //list_View.setAdapter(svetacIkonaAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 1:
-                System.out.println("QQQQQQQQ");
-                System.out.println(0b10);
+
+                if (PravoslavniKalendar.getInstance().prestupnaGodina()){
+                    list_Item = getResources().getStringArray(R.array.svetitelji_februar_big);
+                }else {
+                    list_Item = getResources().getStringArray(R.array.svetitelji_februar_small);
+                }
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 2:
-                System.out.println("QQQQQQQQ");
-                System.out.println(0b11);
+                list_Item = getResources().getStringArray(R.array.svetitelji_mart);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 3:
-                System.out.println("QQQQQQQQ");
-                System.out.println(izbor);
+                list_Item = getResources().getStringArray(R.array.svetitelji_april);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 4:
-                System.out.println("QQQQQQQQ");
-                System.out.println(izbor);
+                list_Item = getResources().getStringArray(R.array.svetitelji_majs);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 5:
-                System.out.println("QQQQQQQQ");
-                System.out.println(izbor);
+                list_Item = getResources().getStringArray(R.array.svetitelji_jun);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 6:
-                System.out.println("QQQQQQQQ");
-                System.out.println(izbor);
+                list_Item = getResources().getStringArray(R.array.svetitelji_jul);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 7:
-                System.out.println("QQQQQQQQ");
-                System.out.println(izbor);
+                list_Item = getResources().getStringArray(R.array.svetitelji_avgust);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 8:
-                System.out.println("QQQQQQQQ");
-                System.out.println(izbor);
+                list_Item = getResources().getStringArray(R.array.svetitelji_septembar);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 9:
-                System.out.println("QQQQQQQQ");
-                System.out.println(izbor);
+                list_Item = getResources().getStringArray(R.array.svetitelji_oktobar);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 10:
-                System.out.println("QQQQQQQQ");
-                System.out.println(izbor);
+                list_Item = getResources().getStringArray(R.array.svetitelji_novembar);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             case 11:
-                System.out.println("QQQQQQQQ");
-                System.out.println(izbor);
+                list_Item = getResources().getStringArray(R.array.svetitelji_decembar);
+                svetacAdapter = new ArrayAdapter<>(this, R.layout.dan_cell, R.id.id_ime_svetitelja, list_Item);
+                list_View.setAdapter(svetacAdapter);
+                nazivMeseca.setText(getResources().getStringArray(R.array.nazivi_meseca)[izbor]);
                 break;
             default:
-                System.out.println("KKKKKKK");
+                break;
 
         }
     }

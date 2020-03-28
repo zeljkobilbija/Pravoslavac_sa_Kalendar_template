@@ -8,6 +8,7 @@ public class PravoslavneKonstante {
 
 
     public static final String SELECTED_ROW = "Selectovani Row";
+    public static final String NAZIV_MESECA = "Naziv Meseca";
     public int vaskrsMali;
     public int vaskrsVeliki;
     public int petrovskiPostMin;
