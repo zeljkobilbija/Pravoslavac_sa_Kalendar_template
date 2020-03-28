@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_april">
+    <string-array name="svetitelji_april">
 	<item>Свети мученици Хрисант и Дарија, и други с њима</item>
 	<item>Преподобни мученици Јован и други</item>
 	<item>Свети Јаков, епископ и исповедник</item>
@@ -31,5 +31,5 @@
 	<item>Свети апостоли Аристарх, Пуд и Трофим</item>
 	<item>Свете мученице Агапија, Хионија и Ирина</item>
 	<item>Преподобни Симеон епископ Персијски</item>
-    </item-array>
+    </string-array>
 </resources>

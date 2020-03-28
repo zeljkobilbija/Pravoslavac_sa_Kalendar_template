@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_majs">
+    <string-array name="svetitelji_majs">
 	<item>Преподобни Јован</item>
 	<item>Преподобни Јован Ветхопештерник</item>
 	<item>Преподобни Теодор Трихина</item>
@@ -32,5 +32,5 @@
 	<item>Преподобни Теодор Освештани</item>
 	<item>Свети апостол Андроник и Јунија</item>
 	<item>Свети мученик Теодор Анкирски</item>
-    </item-array>
+    </string-array>
 </resources>

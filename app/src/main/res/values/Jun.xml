@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_jun">
+    <string-array name="svetitelji_jun">
 	<item>Свети свештеномученик Патрикије</item>
 	<item>Свети мученик Талалеј</item>
 	<item>+++ СВЕТИ ЦАР КОНСТАНТИН И ЦАРИЦА ЈЕЛЕНА</item>
@@ -31,5 +31,5 @@
 	<item>+++СВ. МУЧЕНИК КНЕЗ ЛАЗАР И СВ. СРПСКИ МУЧЕНИЦИ - ВИДОВДАН</item>
 	<item>Свети Тихон Аматунски Чудотворац</item>
 	<item>Свети мученици Мануил, Савел и Исмаил</item>
-    </item-array>
+    </string-array>
 </resources>

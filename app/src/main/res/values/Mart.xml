@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_mart">
+    <string-array name="svetitelji_mart">
 	<item>Светих дванаест мученика</item>
 	<item>Свети великомученик Теодор Тирон</item>
 	<item>Свети Лав I, папа римски</item>
@@ -33,5 +33,5 @@
 	<item>Свети апостол Аристовул</item>
 	<item>Св. АЛЕКСИЈЕ - ЧОВЕК БОЖЈИ</item>
 	<item>Свети Кирил Јерусалимски</item>
-    </item-array>
+    </string-array>
 </resources>

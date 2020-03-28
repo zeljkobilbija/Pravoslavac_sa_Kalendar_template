@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_februar_small">
+    <string-array name="svetitelji_februar_small">
 	<item>Преподобни Макарије Египатски</item>
 	<item>Преподобни Јевтимије Велики</item>
 	<item>Преподобни Максим Исповедник</item>
@@ -29,5 +29,5 @@
 	<item>Преподобни Симеон Мироточиви - Стефан Немања</item>
 	<item>Преподобни Авксентије</item>
 	<item>Свети апостол Онисим</item>
-    </item-array>
+    </string-array>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_oktobar">
+    <string-array name="svetitelji_oktobar">
 	<item>Свети Евменије Гортински</item>
 	<item>Свети мученици Трофим, Саватије и Доримедонт</item>
 	<item>Свети великомученик Јевстатије</item>
@@ -32,5 +32,5 @@
 	<item>Свети мученик Лонгин Сотник</item>
 	<item>Свети пророк Осија; преподобномученик Андреј Критски</item>
 	<item>Свети апостол и јеванђелист Лука; +++ СВЕТИ ПЕТАР ЦЕТИЊСКИ</item>
-    </item-array>
+    </string-array>
 </resources>

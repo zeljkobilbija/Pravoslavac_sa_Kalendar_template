@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_avgust">
+    <string-array name="svetitelji_avgust">
 	<item>Преподобна Макрина - Свети Стефан, Деспот српски</item>
 	<item>+++ СВЕТИ ПРОРОК ИЛИЈА - ИЛИНДАН</item>
 	<item>Свети пророк Језекиљ</item>
@@ -32,5 +32,5 @@
 	<item>Свети Јевстатије, Други Арх. српски</item>
 	<item>Свети мученик Патрокло</item>
 	<item>Свети мученик Флор</item>
-    </item-array>
+    </string-array>
 </resources>

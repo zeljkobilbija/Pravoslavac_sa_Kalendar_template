@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_novembar">
+    <string-array name="svetitelji_novembar">
 	<item>Св. пророк Јоил; преподоб. Прохор Пчињски; Јован Рилски</item>
 	<item>Свети великомученик Артемије</item>
 	<item>Преподобни Иларион; свети Иларион; свети Исповедник Висарион</item>
@@ -31,5 +31,5 @@
 	<item>Свети мученици Гурије, Самон и Авив (Почетак поста)</item>
 	<item>Свети апостол и јеванђелист Матеј</item>
 	<item>Свети Григорије Чудотворац; Свети Никон Радоњешки</item>
-    </item-array>
+    </string-array>
 </resources>

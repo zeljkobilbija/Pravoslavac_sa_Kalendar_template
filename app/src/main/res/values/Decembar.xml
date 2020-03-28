@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_decembar">
+    <string-array name="svetitelji_decembar">
 	<item>Свети мученик Платон</item>
 	<item>Свети пророк Авдија</item>
 	<item>Преподобни Григорије Декаполит</item>
@@ -32,5 +32,5 @@
 	<item>Свети пророк Агеј</item>
 	<item>Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил</item>
 	<item>Свети мученик Севастијани други с њим</item>
-    </item-array>
+    </string-array>
 </resources>

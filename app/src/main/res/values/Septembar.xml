@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_septembar">
+    <string-array name="svetitelji_septembar">
 	<item>Свети мученик Андреј Стратилат</item>
 	<item>Свети пророк Самуило</item>
 	<item>Св. апостол Тадеј; св. муч. Васа са децом; св. муч. Рафаило Шишатовачки</item>
@@ -31,5 +31,5 @@
 	<item>Свети великомученик Никита</item>
 	<item>Св. великомуч. Јефимија</item>
 	<item>Свете мученице Вера, Нада и Љубав и мајка им Софија</item>
-    </item-array>
+    </string-array>
 </resources>

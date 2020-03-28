@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <item-array name="svetitelji_jul">
+    <string-array name="svetitelji_jul">
 	<item>Свети мученици Леонтије, Ипатије и Теодул</item>
 	<item>Свети апостол Јуда</item>
 	<item>Свети свештеномученик Методије</item>
@@ -32,5 +32,5 @@
 	<item>Свештеномученик Атиноген</item>
 	<item>Света великомученица Марина - Огњена Марија</item>
 	<item>Свети мученик Емилијан - Свети мученик Јакинт</item>
-    </item-array>
+    </string-array>
 </resources>
