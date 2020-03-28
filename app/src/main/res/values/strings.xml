@@ -24,4 +24,7 @@
     <string name="selekcija_kalendara_">selekcija kalendara godisnjeg i mesecnog</string>
     <string name="back_button">back button image za kalendar 12 meseci</string>
     <string name="_2020_godina">2020. godina</string>
+    <string name="naziv_meseca">Naziv Meseca</string>
+    <string name="ime_svetitelja">Ime app:layout_constraintTop_toBottomOf="@+id/id_ime_svetitelja"Svetitelja</string>
+    <string name="datum">21. januar 2020 god.</string>
 </resources>
