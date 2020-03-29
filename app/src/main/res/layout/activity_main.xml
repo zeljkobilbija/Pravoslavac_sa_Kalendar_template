@@ -242,8 +242,8 @@
    </LinearLayout>
    <com.google.android.gms.ads.AdView
            android:id="@+id/adView"
-           android:layout_width="461dp"
-           android:layout_height="99dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
            android:layout_centerHorizontal="true"
            android:layout_alignParentBottom="true"
            app:adSize="SMART_BANNER"

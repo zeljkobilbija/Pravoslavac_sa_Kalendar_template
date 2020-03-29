@@ -9,6 +9,8 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class Info extends AppCompatActivity {
 
@@ -20,6 +22,11 @@ public class Info extends AppCompatActivity {
         setContentView(R.layout.activity_info);
 
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
+        GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(Info.this);
+        FirebaseInstanceId.getInstance().getInstanceId();
+        //TODO: Aktivirati AdMob pre slanja na GooglePlayStore
+        // TODO: i proveriti codice za bannere
+        //addMob();
 
     }
 
@@ -35,7 +42,7 @@ public class Info extends AppCompatActivity {
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
-        mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(R.id.reklama);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
     }
