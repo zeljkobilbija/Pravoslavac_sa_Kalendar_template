@@ -31,7 +31,7 @@
                 android:text="@string/ime_svetitelja"
                 android:textColor="#FFFFFF"
                 android:textStyle="italic"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textSize="14sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

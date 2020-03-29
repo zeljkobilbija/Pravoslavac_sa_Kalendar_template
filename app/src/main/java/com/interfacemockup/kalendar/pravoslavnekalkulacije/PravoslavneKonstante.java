@@ -146,6 +146,17 @@ public class PravoslavneKonstante {
                 R.drawable.ik_347, R.drawable.ik_348, R.drawable.ik_349, R.drawable.ik_350, R.drawable.ik_351, R.drawable.ik_352, R.drawable.ik_353, R.drawable.ik_354, R.drawable.ik_355, R.drawable.ik_356, R.drawable.ik_357, R.drawable.ik_358, R.drawable.ik_359,
                 R.drawable.ik_360, R.drawable.ik_361, R.drawable.ik_362, R.drawable.ik_363, R.drawable.ik_364, R.drawable.ik_365, R.drawable.ik_366
         };
+
+    }
+
+
+    public int[] drawables_januar;
+    {
+        drawables_januar = new int[]{
+                R.drawable.ik_1, R.drawable.ik_2, R.drawable.ik_3, R.drawable.ik_4, R.drawable.ik_5, R.drawable.ik_6, R.drawable.ik_7, R.drawable.ik_8, R.drawable.ik_9, R.drawable.ik_10, R.drawable.ik_11, R.drawable.ik_12, R.drawable.ik_13, R.drawable.ik_14, R.drawable.ik_15,
+                R.drawable.ik_16, R.drawable.ik_17, R.drawable.ik_18, R.drawable.ik_19, R.drawable.ik_20, R.drawable.ik_21, R.drawable.ik_22, R.drawable.ik_23, R.drawable.ik_24, R.drawable.ik_25, R.drawable.ik_26, R.drawable.ik_27, R.drawable.ik_28, R.drawable.ik_29,
+                R.drawable.ik_30, R.drawable.ik_31
+        };
     }
 
 }
