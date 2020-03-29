@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
     private View _view;
 
     private ImageView _kalendarImage;
+    private ImageView _infoImage;
+
     private int _rb_danaUgodini = 0;
     private Calendar _calendar;
     private int _counter;
@@ -95,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
         _view = findViewById(R.id.bgView);
 
         _kalendarImage = findViewById(R.id.id_kalendar_imageA);
+        _infoImage = findViewById(R.id.id_kalendar_imageE);
+
         _postLabel = findViewById(R.id.idPostLabe);
         _gregorijanskiDatumLabel = findViewById(R.id.idGregorijanskiDatumLabel);
         _ikona = findViewById(R.id.idIkona);
@@ -313,6 +317,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void otvoriInfo(View view) {
+        Intent intent = new Intent(this, Info.class);
+        startActivity(intent);
     }
 }
 

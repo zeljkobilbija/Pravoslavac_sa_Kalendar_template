@@ -12,9 +12,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-
-        <activity android:name=".MesecniKalendar"
-                  android:screenOrientation="portrait">
+        <activity android:name=".Info">
+        </activity>
+        <activity
+                android:name=".MesecniKalendar"
+                android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".GodisnjiKalendar"
