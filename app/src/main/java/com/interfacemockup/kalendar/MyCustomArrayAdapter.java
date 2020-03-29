@@ -32,8 +32,10 @@ public class MyCustomArrayAdapter extends ArrayAdapter<Item> {
         v = inflater.inflate(R.layout.dan_cell, null);
         TextView textView = (TextView) v.findViewById(R.id.id_ime_svetitelja);
         ImageView imageView = (ImageView) v.findViewById(R.id.id_ikona_svetitelja);
+        TextView datumText = (TextView) v.findViewById(R.id.id_datum);
         textView.setText(listaSvetaca.get(position).getSvetacName());
         imageView.setImageResource(listaSvetaca.get(position).getSvetacImage());
+        datumText.setText(listaSvetaca.get(position).getdatum());
         return v;
 
     }

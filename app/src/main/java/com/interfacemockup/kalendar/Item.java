@@ -2,22 +2,25 @@ package com.interfacemockup.kalendar;
 
 public class Item {
 
-    String svetac;
-    int ikona;
+    String _svetac;
+    String _datum;
+    int _ikona;
 
-    public Item(String svetacName, int svetacImage)
+    public Item(String svetacName, int svetacImage, String datum )
     {
-        this.ikona = svetacImage;
-        this.svetac = svetacName;
+        this._ikona = svetacImage;
+        this._svetac = svetacName;
+        this._datum = datum;
     }
 
 
     public String getSvetacName()
     {
-        return svetac;
+        return _svetac;
     }
+    public String getdatum() {return _datum;}
     public int getSvetacImage()
     {
-        return ikona;
+        return _ikona;
     }
 }
