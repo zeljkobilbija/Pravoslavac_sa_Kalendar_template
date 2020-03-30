@@ -50,7 +50,7 @@ public class MesecniKalendar extends AppCompatActivity {
                 // Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(), DetailKalendar.class);
-                intent.putExtra(PravoslavneKonstante.SELECTED_ROW, redniBroj);
+                intent.putExtra(PravoslavneKonstante.SELECTED_ROW, position);
 
                 startActivity(intent);
 

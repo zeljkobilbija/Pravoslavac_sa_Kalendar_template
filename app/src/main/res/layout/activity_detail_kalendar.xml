@@ -48,7 +48,7 @@
         android:layout_marginBottom="8dp"/>
 
     <EditText
-        android:id="@+id/textView2"
+        android:id="@+id/zitije"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
