@@ -3,6 +3,7 @@ package com.interfacemockup.kalendar;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -41,6 +42,21 @@ public class MesecniKalendar extends AppCompatActivity {
         redniBroj = getIntent().getIntExtra(SELECTED_ROW, redniBroj);
         lista = new ArrayList<>();
 
+        list_View.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                // TODO Auto-generated method stub
+                //String value=adapter.getItem(position);
+                // Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(), DetailKalendar.class);
+                intent.putExtra(PravoslavneKonstante.SELECTED_ROW, redniBroj);
+
+                startActivity(intent);
+
+            }
+        });
+
 
 
         mesec(redniBroj);
@@ -50,6 +66,8 @@ public class MesecniKalendar extends AppCompatActivity {
 
     public void mesecni_kal_home_btn_click(View view) {
         Intent intent = new Intent(getApplicationContext(), GodisnjiKalendar.class);
+        intent.putExtra(PravoslavneKonstante.SELECTED_ROW, redniBroj);
+
         startActivity(intent);
     }
 
