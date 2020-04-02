@@ -7,6 +7,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
@@ -39,8 +41,9 @@ public class MesecniKalendar extends AppCompatActivity {
 
         list_View = findViewById(R.id.id_Trideset_dana_ListView);
         nazivMeseca = findViewById(R.id.id_mesec_textView);
-        redniBroj = getIntent().getIntExtra(SELECTED_ROW, redniBroj);
+        redniBroj = getIntent().getIntExtra("mesec", 0);
         lista = new ArrayList<>();
+
 
         list_View.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -49,13 +52,15 @@ public class MesecniKalendar extends AppCompatActivity {
                 //String value=adapter.getItem(position);
                 // Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getApplicationContext(), DetailKalendar.class);
-                intent.putExtra(PravoslavneKonstante.SELECTED_ROW, position);
-
-                startActivity(intent);
+                Intent intent = new Intent(MesecniKalendar.this, DetailKalendar.class);
+                intent.putExtra("day", position);
+                intent.putExtra("month", redniBroj);
+                startActivityForResult(intent, 1);
 
             }
         });
+
+
 
 
 
@@ -64,10 +69,19 @@ public class MesecniKalendar extends AppCompatActivity {
 
     }
 
-    public void mesecni_kal_home_btn_click(View view) {
-        Intent intent = new Intent(getApplicationContext(), GodisnjiKalendar.class);
-        intent.putExtra(PravoslavneKonstante.SELECTED_ROW, redniBroj);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1){
+            if (resultCode == RESULT_OK){
+                int rez = data.getIntExtra("mmm", 0);
+                redniBroj = rez;
+            }
+        }
+    }
 
+    public void mesecni_kal_home_btn_click(View view) {
+        Intent intent = new Intent(MesecniKalendar.this, GodisnjiKalendar.class);
         startActivity(intent);
     }
 
@@ -86,6 +100,7 @@ public class MesecniKalendar extends AppCompatActivity {
             case 10:
             case 11:
                 kojiJeMesec = getResources().getStringArray(nazivi_meseca)[izbor];
+
                 break;
             default:
                 break;

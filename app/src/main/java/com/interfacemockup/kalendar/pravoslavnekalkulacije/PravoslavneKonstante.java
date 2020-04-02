@@ -5,15 +5,16 @@ import com.interfacemockup.kalendar.R;
 public class PravoslavneKonstante {
 
     public PravoslavniKalendar sharedKalendar = PravoslavniKalendar.getInstance();
-
+    public int[] daGaSkinemSaKurcaNajzad = new int[]{0, 0};
 
     public static final String SELECTED_ROW = "Selectovani Row";
-    public static final String NAZIV_MESECA = "Naziv Meseca";
+   // public static final String NAZIV_MESECA = "Naziv Meseca";
     public int vaskrsMali;
     public int vaskrsVeliki;
     public int petrovskiPostMin;
     public int petrovskiPostMax;
     public int godina;
+
 
     public void izracunajVaskrs(int counter) {
 

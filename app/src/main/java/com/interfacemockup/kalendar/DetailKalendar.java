@@ -16,7 +16,8 @@ import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
 
 public class DetailKalendar extends AppCompatActivity {
 
-    private int _selectedRow;
+    private int _day;
+    private int _month;
     private ImageView _ikona;
     private TextView _svetac;
     private EditText _zitije;
@@ -29,20 +30,23 @@ public class DetailKalendar extends AppCompatActivity {
         setContentView(R.layout.activity_detail_kalendar);
 
         _konst = new PravoslavneKonstante();
-        _selectedRow = getIntent().getIntExtra(PravoslavneKonstante.SELECTED_ROW, 0);
-
         _ikona = findViewById(R.id.ikona);
         _svetac = findViewById(R.id.svetac);
         _zitije = findViewById(R.id.zitije);
 
+        Intent intent = getIntent();
+        _day = intent.getIntExtra("day", 0);
+        _month = intent.getIntExtra("month", 0);
 
 
-        _ikona.setImageResource(_konst.drawables_januar[_selectedRow]);
 
-        _zitije.setText(getResources().getStringArray(R.array.zitija_jun)[_selectedRow]);
 
-        Animation anim = AnimationUtils.loadAnimation(this, R.anim.mixed_anim);
-        _ikona.startAnimation(anim);
+        _ikona.setImageResource(_konst.drawables_januar[_day]);
+
+        _zitije.setText(getResources().getStringArray(R.array.zitija_jun)[_day]);
+
+        //Animation anim = AnimationUtils.loadAnimation(this, R.anim.mixed_anim);
+        //_ikona.startAnimation(anim);
 
 
 
@@ -50,10 +54,10 @@ public class DetailKalendar extends AppCompatActivity {
     }
 
     public void backDetail(View view) {
-        Intent intent = new Intent(getApplicationContext(), MesecniKalendar.class);
-        intent.putExtra(PravoslavneKonstante.SELECTED_ROW, _selectedRow);
-        startActivity(intent);
-
+        Intent backIntent = new Intent();
+        backIntent.putExtra("mmm", _month);
+        setResult(RESULT_OK, backIntent);
+        finish();;
     }
 
 }

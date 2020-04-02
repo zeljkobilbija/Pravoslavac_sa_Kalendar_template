@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
 
+import static com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante.SELECTED_ROW;
+
 public class GodisnjiKalendar extends AppCompatActivity {
 
     View view;
@@ -15,6 +17,7 @@ public class GodisnjiKalendar extends AppCompatActivity {
     private ListView listView;
     private TextView textView;
     private String[] listItem;
+    private PravoslavneKonstante _sharedConstante;
 
 
 
@@ -23,8 +26,10 @@ public class GodisnjiKalendar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_godisnji_kalendar);
 
-        listView=(ListView)findViewById(R.id.idDvanaestMeseciListView);
-        textView=(TextView)findViewById(R.id.id_mesec_cell_textView);
+        _sharedConstante = new PravoslavneKonstante();
+
+        listView = findViewById(R.id.idDvanaestMeseciListView);
+        textView = findViewById(R.id.id_mesec_cell_textView);
         listItem = getResources().getStringArray(R.array.nazivi_meseca);
 
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -42,9 +47,8 @@ public class GodisnjiKalendar extends AppCompatActivity {
                 //String value=adapter.getItem(position);
                // Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getApplicationContext(), MesecniKalendar.class);
-                intent.putExtra(PravoslavneKonstante.SELECTED_ROW, position);
-
+                Intent intent = new Intent(GodisnjiKalendar.this, MesecniKalendar.class);
+                intent.putExtra("mesec", position);
                 startActivity(intent);
 
             }
@@ -55,7 +59,7 @@ public class GodisnjiKalendar extends AppCompatActivity {
 
 
     public void home_btn_click(View view) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
