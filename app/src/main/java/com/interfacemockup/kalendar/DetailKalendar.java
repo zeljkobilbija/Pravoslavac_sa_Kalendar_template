@@ -42,11 +42,11 @@ public class DetailKalendar extends AppCompatActivity {
 
 
         _ikona.setImageResource(_konst.drawables_januar[_day]);
-
+        _svetac.setText("WWWWWWWWWW");
         _zitije.setText(getResources().getStringArray(R.array.zitija_jun)[_day]);
 
-        //Animation anim = AnimationUtils.loadAnimation(this, R.anim.mixed_anim);
-        //_ikona.startAnimation(anim);
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.sample_anim);
+        _ikona.startAnimation(anim);
 
 
 
