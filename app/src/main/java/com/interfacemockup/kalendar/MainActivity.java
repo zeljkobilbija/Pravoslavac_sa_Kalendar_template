@@ -29,6 +29,8 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.dynamiclinks.DynamicLink;
+import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import static android.content.ContentValues.TAG;
@@ -311,6 +313,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sharePravoslavca(View view) {
+
+        Uri link = DynamicLinksUtil.generateContentLink();
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, link.toString());
+
+        startActivity(Intent.createChooser(intent, "Share Link"));
+
     }
 
     public void otvoriMolitvenik(View view) {
