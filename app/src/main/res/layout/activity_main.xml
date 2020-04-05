@@ -59,7 +59,8 @@
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@+id/idGregorijanskiDatumLabel"
-           android:layout_marginTop="4dp" android:fontFamily="@font/actor"/>
+           android:layout_marginTop="4dp"
+            android:fontFamily="@font/actor"/>
 
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavnaIkona
@@ -85,7 +86,9 @@
            android:textStyle="italic"
            android:textSize="20sp"
            android:textColor="@color/colorSiviText"
-           android:lines="3" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+           android:lines="3"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
            android:fontFamily="@font/actor"/>
 
 
@@ -101,7 +104,8 @@
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@+id/idSvetacLabel"
            android:layout_marginTop="16dp"
-           android:textColor="@color/colorBanana" android:fontFamily="@font/actor"/>
+           android:textColor="@color/colorBanana"
+       android:fontFamily="@font/actor"/>
 
    <TextView
            android:id="@+id/idJulTextView"
