@@ -38,20 +38,82 @@ public class DetailKalendar extends AppCompatActivity {
         _day = intent.getIntExtra("day", 0);
         _month = intent.getIntExtra("month", 0);
 
-
-
-
-        _ikona.setImageResource(_konst.drawables_januar[_day]);
-        _svetac.setText("WWWWWWWWWW");
-        _zitije.setText(getResources().getStringArray(R.array.zitija_jun)[_day]);
+        setUI(_month, _day);
 
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.sample_anim);
         _ikona.startAnimation(anim);
 
+    }
 
 
+    private void setUI(int mesec, int dan){
+        switch (mesec){
+            case 0:
+                // Januar
+                _ikona.setImageResource(_konst.drawables_januar[dan]);
+                _svetac.setText(getResources().getStringArray(R.array.svetitelji_januar)[dan]);
+                _zitije.setText(getResources().getStringArray(R.array.zitija_januar)[dan]);
+                break;
+            case 1:
+                // Februar
+                break;
+            case 2:
+                //Mart
+                _ikona.setImageResource(_konst.drawables_mart[dan]);
+                _svetac.setText(getResources().getStringArray(R.array.svetitelji_mart)[dan]);
+                _zitije.setText(getResources().getStringArray(R.array.zitija_mart)[dan]);
+
+                break;
+            case 3:
+                //April
+                _ikona.setImageResource(_konst.drawables_april[dan]);
+                _svetac.setText(getResources().getStringArray(R.array.svetitelji_april)[dan]);
+                _zitije.setText(getResources().getStringArray(R.array.zitija_april)[dan]);
+
+                break;
+            case 4:
+                //Maj
+
+                break;
+            case 5:
+                //JUN
+
+                break;
+            case 6:
+                //Jul
+
+                break;
+            case 7:
+                //Avgust
+
+                break;
+            case 8:
+                //Septembar
+
+                break;
+            case 9:
+                //Oktobar
+
+                break;
+            case 10:
+                //Nobvembar
+
+                break;
+            case 11:
+                //Decembar
+
+                break;
+            default:
+                break;
+
+        }
 
     }
+
+
+
+
+
 
     public void backDetail(View view) {
         Intent backIntent = new Intent();
