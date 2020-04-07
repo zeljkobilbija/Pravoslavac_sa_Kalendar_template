@@ -22,9 +22,12 @@
 
     <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/cc"
-            android:id="@+id/imageView" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cc"
+            android:id="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="100dp"/>
 
     <TextView
@@ -38,7 +41,7 @@
             android:fontFamily="@font/actor"
             android:textColor="@color/colorBanana"
             android:textSize="14sp"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:text="@string/info_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
