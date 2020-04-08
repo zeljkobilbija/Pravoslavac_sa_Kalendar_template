@@ -92,7 +92,7 @@ public class DetailKalendar extends AppCompatActivity {
                 //JUN
                 _ikona.setImageResource(_konst.drawables_jun[dan]);
                 _svetac.setText(getResources().getStringArray(R.array.svetitelji_jun)[dan]);
-                _zitije.setText(getResources().getStringArray(R.array.zitija_jun)[dan]);
+                _zitije.setText(getResources().getStringArray(R.array.zitije_jun)[dan]);
 
                 break;
             case 6:
