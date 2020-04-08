@@ -15,7 +15,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:padding="5dp"
-        android:background="@color/colorBanana"
+        android:background="@drawable/back_btn"
+        android:backgroundTint="@color/colorBanana"
         android:src="@drawable/ic_arrow_back_48px"
         android:contentDescription="@string/back_btn_info_activity"
         android:onClick="backDetail"/>

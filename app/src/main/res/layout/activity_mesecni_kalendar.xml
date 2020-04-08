@@ -17,8 +17,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:padding="5dp"
-        android:background="@color/colorBanana"
-        android:src="@drawable/ic_arrow_back_48px"
+            android:background="@drawable/back_btn"
+            android:backgroundTint="@color/colorBanana"
+            android:src="@drawable/ic_arrow_back_48px"
             android:contentDescription="@string/back_button"
             android:onClick="mesecni_kal_home_btn_click"/>
 
