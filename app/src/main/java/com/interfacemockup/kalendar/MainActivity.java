@@ -329,6 +329,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void otvoriMolitvenik(View view) {
+
     }
 
     public void otvoriInfo(View view) {
