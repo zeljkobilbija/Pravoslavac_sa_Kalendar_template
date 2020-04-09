@@ -312,6 +312,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void otvoriKatihizis(View view) {
+        Intent intent = new Intent(this, Katihizis.class);
+        startActivity(intent);
     }
 
     public void sharePravoslavca(View view) {

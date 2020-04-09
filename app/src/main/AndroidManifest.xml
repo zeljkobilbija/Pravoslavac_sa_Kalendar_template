@@ -12,22 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".DetailKalendar"
-                    android:screenOrientation="portrait"></activity>
-        <activity android:name=".Info"></activity>
+        <activity android:name=".Katihizis"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".DetailKalendar"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Info" />
         <activity
             android:name=".MesecniKalendar"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".GodisnjiKalendar"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

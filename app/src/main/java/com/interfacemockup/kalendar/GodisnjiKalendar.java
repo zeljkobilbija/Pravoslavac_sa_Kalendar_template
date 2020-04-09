@@ -7,6 +7,7 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniKalendar;
 
 import static com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante.SELECTED_ROW;
 
@@ -16,6 +17,8 @@ public class GodisnjiKalendar extends AppCompatActivity {
 
     private ListView listView;
     private TextView textView;
+    private PravoslavniKalendar _sharedKalendar;
+    private int _godina;
     private String[] listItem;
     private PravoslavneKonstante _sharedConstante;
 
@@ -26,11 +29,16 @@ public class GodisnjiKalendar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_godisnji_kalendar);
 
+        _sharedKalendar = PravoslavniKalendar.getInstance();
+        _godina = _sharedKalendar.getTrenutnuGodinu();
         _sharedConstante = new PravoslavneKonstante();
 
         listView = findViewById(R.id.idDvanaestMeseciListView);
-        textView = findViewById(R.id.id_mesec_cell_textView);
+        textView = findViewById(R.id.id_godina_textView);
         listItem = getResources().getStringArray(R.array.nazivi_meseca);
+
+        String str_godinaText = _godina + ". година";
+        textView.setText(str_godinaText);
 
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, listItem);

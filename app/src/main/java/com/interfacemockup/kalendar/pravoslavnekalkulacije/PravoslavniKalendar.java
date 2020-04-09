@@ -92,6 +92,16 @@ public class PravoslavniKalendar {
         return Integer.parseInt(god);
     }
 
+    public int getTrenutnuGodinu(){
+
+        Date now = new Date();
+        String pattern = "yyyy";
+        Locale locale = new Locale("sr", "SR");
+        SimpleDateFormat godina = new SimpleDateFormat(pattern, locale);
+        String god = godina.format(now);
+        return Integer.parseInt(god);
+    }
+
 
 // TODO: OVO JE OK ZA SADA
     @RequiresApi(api = Build.VERSION_CODES.N)
