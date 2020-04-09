@@ -17,7 +17,7 @@
         android:background="@color/colorBraon"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="1dp" />
 
     <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniPostLabel
            android:id="@+id/idPostLabe"
@@ -135,64 +135,13 @@
            android:layout_marginEnd="16dp">
 
 
-     <!-- <ImageButton
-              android:id="@+id/idBtnA"
-              android:background="@drawable/btnshape"
-              android:layout_width="50dp"
-              android:layout_height="50dp"
-              android:layout_margin="5dp"
-              android:src="@drawable/fb_1"
-              tools:layout_editor_absoluteY="510dp"
-              tools:layout_editor_absoluteX="186dp"
-              android:contentDescription="@string/todo"/>
-      <ImageButton
-              android:id="@+id/idBtnB"
-              android:background="@drawable/btnshape"
-              android:layout_width="50dp"
-              android:layout_height="50dp"
-              android:layout_margin="5dp"
-              android:src="@drawable/fb_2"
-              tools:layout_editor_absoluteY="510dp"
-              tools:layout_editor_absoluteX="99dp"
-              android:contentDescription="@string/todo"/>
-
-      <ImageButton
-              android:id="@+id/idBtnShare"
-              android:background="@drawable/btnshape"
-              android:layout_width="50dp"
-              android:layout_height="50dp"
-              android:layout_margin="5dp"
-              android:src="@drawable/fb_convert"
-              android:contentDescription="@string/todo"/>
-
-
-      <ImageButton
-              android:id="@+id/idBtnC"
-              android:background="@drawable/btnshape"
-              android:layout_width="50dp"
-              android:layout_height="50dp"
-              android:layout_margin="5dp"
-              android:src="@drawable/fb_3"
-              tools:layout_editor_absoluteY="510dp"
-              tools:layout_editor_absoluteX="16dp"
-              android:contentDescription="@string/todo"/>
-      <ImageButton
-              android:id="@+id/idBtnD"
-              android:background="@drawable/btnshape"
-              android:layout_width="50dp"
-              android:layout_height="50dp"
-              android:layout_margin="5dp"
-              android:src="@drawable/fb_4"
-              tools:layout_editor_absoluteY="510dp"
-              tools:layout_editor_absoluteX="266dp"
-              android:contentDescription="@string/todo"/>-->
       <ImageView
               android:id="@+id/id_kalendar_imageA"
               android:contentDescription="@string/selekcija_kalendara_"
               android:layout_width="50dp"
               android:layout_height="50dp"
               android:background="@drawable/back_btn_big"
-              android:layout_margin="3dp"
+              android:layout_margin="10dp"
               android:padding="5dp"
               android:onClick="otvoriKalendar"
           android:backgroundTint="@color/colorBanana"
@@ -205,7 +154,7 @@
               android:layout_height="50dp"
               android:background="@drawable/back_btn_big"
               android:backgroundTint="@color/colorBanana"
-              android:layout_margin="3dp"
+          android:layout_margin="10dp"
               android:padding="5dp"
               android:onClick="otvoriKatihizis"
               android:src="@drawable/ic_book_48px">
@@ -216,7 +165,7 @@
               android:layout_width="50dp"
               android:layout_height="50dp"
               android:background="@drawable/back_btn_big"
-              android:layout_margin="3dp"
+          android:layout_margin="10dp"
               android:padding="5dp"
               android:onClick="sharePravoslavca"
               android:backgroundTint="@color/colorBanana"
@@ -229,7 +178,7 @@
               android:layout_height="50dp"
               android:background="@drawable/back_btn_big"
               android:backgroundTint="@color/colorBanana"
-              android:layout_margin="3dp"
+          android:layout_margin="10dp"
               android:padding="5dp"
               android:onClick="otvoriMolitvenik"
               android:src="@drawable/ic_pan_tool_48px">
@@ -242,7 +191,7 @@
               android:layout_height="50dp"
               android:background="@drawable/back_btn_big"
               android:backgroundTint="@color/colorBanana"
-              android:layout_margin="3dp"
+          android:layout_margin="10dp"
               android:padding="5dp"
               android:onClick="otvoriInfo"
               android:src="@drawable/ic_info_48px">
