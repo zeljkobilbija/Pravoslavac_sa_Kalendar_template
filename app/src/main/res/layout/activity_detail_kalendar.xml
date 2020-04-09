@@ -23,8 +23,8 @@
 
     <ImageView
         android:id="@+id/ikona"
-        android:layout_width="145dp"
-        android:layout_height="198dp"
+        android:layout_width="117dp"
+        android:layout_height="162dp"
         android:layout_marginTop="16dp"
         android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
         android:text="@string/info_text2"
         android:textAlignment="textStart"
         android:textColor="@color/colorSiviText"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/id_detail_kalendar"
         app:layout_constraintEnd_toEndOf="parent"

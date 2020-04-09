@@ -63,7 +63,7 @@
         android:onClick="left_klik"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_odgovor_textView"
-        app:srcCompat="@drawable/ic_arrow_back_48px" />
+        app:srcCompat="@drawable/ic_chevron_left_48px" />
 
     <ImageView
         android:id="@+id/id_napred_imageView"
@@ -76,7 +76,7 @@
         android:onClick="right_klik_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_odgovor_textView"
-        app:srcCompat="@drawable/ic_headset_48px" />
+        app:srcCompat="@drawable/ic_chevron_right_48px" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adKatihizis"
