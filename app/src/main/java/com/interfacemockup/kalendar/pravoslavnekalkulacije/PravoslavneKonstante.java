@@ -15,6 +15,8 @@ public class PravoslavneKonstante {
     public int petrovskiPostMax;
     public int godina;
 
+    public int globalniKatihizisInt;
+
 
     public void izracunajVaskrs(int counter) {
 

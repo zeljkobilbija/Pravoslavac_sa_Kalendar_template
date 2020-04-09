@@ -8,6 +8,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
+
 import static com.interfacemockup.kalendar.R.array.katehizis_odgovori;
 import static com.interfacemockup.kalendar.R.array.katehizis_pitanja;
 
@@ -17,14 +24,20 @@ public class Katihizis extends AppCompatActivity {
     private TextView _odgovor;
     private ImageView _left;
     private ImageView _right;
-
     private int _counter;
+
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_katihizis);
+
+        MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
+
+
         _counter = 0;
+
         _pitanje = findViewById(R.id.id_pitanje_textView);
         _odgovor = findViewById(R.id.id_odgovor_textView);
         _left = findViewById(R.id.id_nazad_imageView);
@@ -32,6 +45,8 @@ public class Katihizis extends AppCompatActivity {
 
         setBtnVisibility(_counter);
         setPitanjeOdgovor(_counter);
+        // TODO: aktivirati AdMob
+        //addMob();
     }
 
 
@@ -86,5 +101,16 @@ public class Katihizis extends AppCompatActivity {
     public void backKatihizis(View view) {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
+    }
+
+    private void addMob(){
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        mAdView = findViewById(R.id.adKatihizis);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 }
