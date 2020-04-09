@@ -23,14 +23,14 @@
 
     <ImageView
         android:id="@+id/ikona"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="145dp"
+        android:layout_height="198dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_backBtn_detail"
-        app:srcCompat="@drawable/cc"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/cc" />
 
     <TextView
         android:id="@+id/svetac"
@@ -42,6 +42,7 @@
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="italic"
+        android:padding="10dp"
         android:textColor="@color/colorBanana"
         android:text="@string/ime_svetitelja"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,29 +59,30 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:isScrollContainer="true"
-        android:text="@string/info_text2"
-        android:inputType="none"
+        android:autofillHints="Text Zitija Svetitelja"
         android:clickable="false"
-        android:cursorVisible="false"
         android:contextClickable="false"
-        android:lines="1000"
+        android:cursorVisible="false"
         android:focusable="false"
+        android:padding="10dp"
         android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:isScrollContainer="true"
+        android:lines="1000"
+        android:text="@string/info_text2"
         android:textAlignment="textStart"
         android:textColor="@color/colorSiviText"
         android:textSize="14sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@id/id_detail_reklama"
+        app:layout_constraintBottom_toTopOf="@+id/id_detail_kalendar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/svetac"
-        app:layout_constraintVertical_bias="1.0"
-        android:autofillHints="Text Zitija Svetitelja"/>
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/id_detail_reklama"
+        android:id="@+id/id_detail_kalendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

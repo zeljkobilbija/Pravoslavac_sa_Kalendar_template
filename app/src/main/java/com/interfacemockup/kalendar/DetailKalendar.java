@@ -12,6 +12,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniKalendar;
 
@@ -25,10 +30,14 @@ public class DetailKalendar extends AppCompatActivity {
     private PravoslavneKonstante _konst;
     private ListView _list;
 
+    private AdView mAdView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_kalendar);
+
+        MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
 
         _konst = new PravoslavneKonstante();
         _ikona = findViewById(R.id.ikona);
@@ -43,6 +52,10 @@ public class DetailKalendar extends AppCompatActivity {
 
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.sample_anim);
         _ikona.startAnimation(anim);
+
+
+        //TODO: aktivirati AdMob
+        //addMob();
 
     }
 
@@ -145,15 +158,23 @@ public class DetailKalendar extends AppCompatActivity {
     }
 
 
-
-
-
-
     public void backDetail(View view) {
         Intent backIntent = new Intent();
         backIntent.putExtra("mmm", _month);
         setResult(RESULT_OK, backIntent);
         finish();;
+    }
+
+
+    private void addMob(){
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        mAdView = findViewById(R.id.id_detail_kalendar);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
 }
