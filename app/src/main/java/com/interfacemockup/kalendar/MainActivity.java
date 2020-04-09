@@ -329,7 +329,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void otvoriMolitvenik(View view) {
-
+        Intent intent = new Intent(this, Molitve.class);
+        startActivity(intent);
     }
 
     public void otvoriInfo(View view) {
