@@ -35,9 +35,9 @@ public class KatihizisDva extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                // TODO Auto-generated method stub
-                String value=adapter.getItem(position);
-                Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(KatihizisDva.this, KatihizisDetail.class);
+                intent.putExtra("pitanje", position);
+                startActivity(intent);
 
             }
         });
