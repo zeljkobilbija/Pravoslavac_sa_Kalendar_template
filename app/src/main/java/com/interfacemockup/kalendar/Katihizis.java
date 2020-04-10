@@ -47,8 +47,7 @@ public class Katihizis extends AppCompatActivity {
 
         setBtnVisibility(_counter);
         setPitanjeOdgovor(_counter);
-        // TODO: aktivirati AdMob
-        //addMob();
+        addMob();
     }
 
 

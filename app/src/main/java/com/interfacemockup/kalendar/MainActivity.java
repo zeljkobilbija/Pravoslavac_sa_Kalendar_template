@@ -150,9 +150,8 @@ public class MainActivity extends AppCompatActivity {
         _julijanskiDatumLabel.napisiJulijanskiDatum(counter_to_add);
         _julijanskiDatumLabel.setBojuTexta(counter_to_add);
 
-        //TODO: Aktivirati AdMob pre slanja na GooglePlayStore
-        // TODO: i proveriti codice za bannere
-        //addMob();
+
+        addMob();
 
         //TODO: Ova funkcija ispod izgleda nije uopste potrebna osim za pronalazenje tokena
         //findMessageToken();
@@ -337,6 +336,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Info.class);
         startActivity(intent);
     }
+
+
 }
 
 

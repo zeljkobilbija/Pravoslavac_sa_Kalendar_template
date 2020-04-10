@@ -55,9 +55,7 @@ public class DetailKalendar extends AppCompatActivity {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.sample_anim);
         _ikona.startAnimation(anim);
 
-
-        //TODO: aktivirati AdMob
-        //addMob();
+        addMob();
 
     }
 
