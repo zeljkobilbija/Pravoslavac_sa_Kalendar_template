@@ -311,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void otvoriKatihizis(View view) {
-        Intent intent = new Intent(this, Katihizis.class);
+        Intent intent = new Intent(this, KatihizisDva.class);
         startActivity(intent);
     }
 

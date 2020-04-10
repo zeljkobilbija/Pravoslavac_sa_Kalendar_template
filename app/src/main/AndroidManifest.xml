@@ -12,14 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MoltvaDetail"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".Molitve"
+        <activity
+            android:name=".KatihizisDva"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
         <activity
-            android:name=".Katihizis"
+            android:name=".MoltvaDetail"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Molitve"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity

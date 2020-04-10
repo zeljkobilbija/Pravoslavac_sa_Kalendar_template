@@ -35,5 +35,6 @@
     <string name="ikona_za_molitvu">ikona za molitvu</string>
     <string name="textview_odgovor">TextView odgovor</string>
     <string name="textview_pitanje">TextView pitanje</string>
+    <string name="katihizis">Катихизис</string>
 
 </resources>
