@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -26,7 +27,7 @@ public class DetailKalendar extends AppCompatActivity {
     private int _month;
     private ImageView _ikona;
     private TextView _svetac;
-    private EditText _zitije;
+    private TextView _zitije;
     private PravoslavneKonstante _konst;
     private ListView _list;
 
@@ -43,6 +44,7 @@ public class DetailKalendar extends AppCompatActivity {
         _ikona = findViewById(R.id.ikona);
         _svetac = findViewById(R.id.svetac);
         _zitije = findViewById(R.id.zitije);
+        _zitije.setMovementMethod(new ScrollingMovementMethod());
 
         Intent intent = getIntent();
         _day = intent.getIntExtra("day", 0);
