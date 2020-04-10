@@ -32,5 +32,6 @@
     <string name="title_molitve_list">Items</string>
     <string name="title_molitve_detail">Molitve Detail</string>
     <string name="back_btn_molitve_activity">back_btn_molitve_activity</string>
+    <string name="ikona_za_molitvu">ikona za molitvu</string>
 
 </resources>
