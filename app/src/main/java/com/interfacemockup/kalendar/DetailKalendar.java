@@ -16,10 +16,13 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniKalendar;
+
+import java.util.Arrays;
 
 public class DetailKalendar extends AppCompatActivity {
 
@@ -39,6 +42,8 @@ public class DetailKalendar extends AppCompatActivity {
         setContentView(R.layout.activity_detail_kalendar);
 
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
+
+        //new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("4F93385764579C780A11C861D3268329"));
 
         _konst = new PravoslavneKonstante();
         _ikona = findViewById(R.id.ikona);
@@ -162,7 +167,7 @@ public class DetailKalendar extends AppCompatActivity {
         Intent backIntent = new Intent();
         backIntent.putExtra("mmm", _month);
         setResult(RESULT_OK, backIntent);
-        finish();;
+        finish();
     }
 
 

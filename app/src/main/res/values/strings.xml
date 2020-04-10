@@ -36,5 +36,9 @@
     <string name="textview_odgovor">TextView odgovor</string>
     <string name="textview_pitanje">TextView pitanje</string>
     <string name="katihizis">Катихизис</string>
+    <string name="katihizis_image">katihizis mmage</string>
+    <string name="share_image">share_image</string>
+    <string name="molitva_image">molitva_image</string>
+    <string name="info_image">info image</string>
 
 </resources>
