@@ -20,7 +20,7 @@ public class DynamicLinksUtil {
                 .setLink(baseUrl)
                 .setDomainUriPrefix(domain)
                 .setIosParameters(new DynamicLink.IosParameters.Builder("com.bilbija.Pravoslavac").build())
-               // .setAndroidParameters(new DynamicLink.AndroidParameters.Builder("com.your.packageName").build())
+                .setAndroidParameters(new DynamicLink.AndroidParameters.Builder("com.interfacemockup.kalendar").build())
                 .buildDynamicLink();
 
         return link.getUri();
