@@ -12,15 +12,22 @@ public class DynamicLinksUtil {
 
     // [START ddl_generate_content_link]
     public static Uri generateContentLink() {
+
+        //ovde najverovatnije ide link na web page ali sam za svaki slucaj stavio page.link
         Uri baseUrl = Uri.parse("https://pravoslavac.page.link/download");
-        String domain = "https://apps.apple.com/it/app/pravoslavac/id1234033120";
+        
+        //ovde ide sigurno page.link
+        String domain = "https://pravoslavac.page.link/download";
+
+
+
 
         DynamicLink link = FirebaseDynamicLinks.getInstance()
                 .createDynamicLink()
                 .setLink(baseUrl)
                 .setDomainUriPrefix(domain)
                 .setIosParameters(new DynamicLink.IosParameters.Builder("com.bilbija.Pravoslavac").build())
-                .setAndroidParameters(new DynamicLink.AndroidParameters.Builder("com.interfacemockup.kalendar").build())
+                .setAndroidParameters(new DynamicLink.AndroidParameters.Builder("com.interfacemockup.pravoslavac").build())
                 .buildDynamicLink();
 
         return link.getUri();
